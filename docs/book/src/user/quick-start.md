@@ -202,7 +202,7 @@ Additional documentation about experimental features can be found in [Experiment
 Depending on the infrastructure provider you are planning to use, some additional prerequisites should be satisfied
 before getting started with Cluster API. See below for the expected settings for common providers.
 
-{{#tabs name:"tab-installation-infrastructure" tabs:"AWS,Azure,DigitalOcean,Docker,Equinix Metal,GCP,Hetzner,Metal3,OCI,OpenStack,vSphere"}}
+{{#tabs name:"tab-installation-infrastructure" tabs:"AWS,Azure,DigitalOcean,Docker,Equinix Metal,GCP,Hetzner,Metal3,Nutanix,OCI,OpenStack,vSphere"}}
 {{#tab AWS}}
 
 Download the latest binary of `clusterawsadm` from the [AWS provider releases] and make sure to place it in your path.
@@ -328,6 +328,11 @@ Please visit the [Hetzner project][Hetzner provider].
 {{#tab Metal3}}
 
 Please visit the [Metal3 project][Metal3 provider].
+
+{{#/tab }}
+{{#tab Nutanix}}
+
+Please follow the Cluster API Provider for [Nutanix Getting Started Guide](https://github.com/nutanix-cloud-native/cluster-api-provider-nutanix/blob/main/docs/getting_started.md)
 
 {{#/tab }}
 {{#tab OCI}}
@@ -580,6 +585,15 @@ Please visit the [Metal3 getting started guide] for more details.
 {{#/tab }}
 {{#tab Nutanix}}
 
+A ClusterAPI compatible image must be available in your Nutanix image library. For instructions on how to build a compatible image
+see [image-builder](https://image-builder.sigs.k8s.io/capi/capi.html).
+
+To see all required Nutanix environment variables execute:
+```bash
+clusterctl generate cluster --infrastructure nutanix --list-variables capi-quickstart
+```
+
+
 {{#/tab }}
 {{#tab OpenStack}}
 
@@ -660,7 +674,7 @@ For more information about prerequisites, credentials management, or permissions
 
 For the purpose of this tutorial, we'll name our cluster capi-quickstart.
 
-{{#tabs name:"tab-clusterctl-config-cluster" tabs:"Azure|AWS|DigitalOcean|Equinix Metal|GCP|Metal3|OpenStack|vSphere,Docker"}}
+{{#tabs name:"tab-clusterctl-config-cluster" tabs:"Azure|AWS|DigitalOcean|Equinix Metal|GCP|Metal3|Nutanix|OpenStack|vSphere,Docker"}}
 {{#tab Azure|AWS|DigitalOcean|Equinix Metal|GCP|Metal3|OpenStack|vSphere}}
 
 ```bash
