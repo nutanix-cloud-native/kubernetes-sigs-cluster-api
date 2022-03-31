@@ -429,7 +429,7 @@ before configuring a cluster with Cluster API. Instructions are provided for com
 Otherwise, you can look at the `clusterctl generate cluster` [command][clusterctl generate cluster] documentation for details about how to
 discover the list of variables required by a cluster templates.
 
-{{#tabs name:"tab-configuration-infrastructure" tabs:"AWS,Azure,DigitalOcean,Docker,Equinix Metal,GCP,Metal3,OpenStack,vSphere"}}
+{{#tabs name:"tab-configuration-infrastructure" tabs:"AWS,Azure,DigitalOcean,Docker,Equinix Metal,GCP,Metal3,Nutanix,OpenStack,vSphere"}}
 {{#tab AWS}}
 
 ```bash
@@ -576,6 +576,9 @@ export IRONIC_INSPECTOR_NO_BASIC_AUTH=true
 ```
 
 Please visit the [Metal3 getting started guide] for more details.
+
+{{#/tab }}
+{{#tab Nutanix}}
 
 {{#/tab }}
 {{#tab OpenStack}}
