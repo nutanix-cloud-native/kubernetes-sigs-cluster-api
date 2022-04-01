@@ -799,7 +799,7 @@ See [Additional Notes for the Docker Provider](../clusterctl/developers.md#addit
 
 Calico is used here as an example.
 
-{{#tabs name:"tab-deploy-cni" tabs:"AWS|DigitalOcean|Docker|Equinix Metal|GCP|Metal3|OpenStack|vSphere,Azure"}}
+{{#tabs name:"tab-deploy-cni" tabs:"AWS|DigitalOcean|Docker|Equinix Metal|GCP|Metal3|Nutanix|OpenStack|vSphere,Azure"}}
 {{#tab AWS|DigitalOcean|Docker|Equinix Metal|GCP|Metal3|OpenStack|vSphere}}
 
 ```bash
